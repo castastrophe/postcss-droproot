@@ -1,19 +1,49 @@
 {
-  "private": true,
   "name": "postcss-droproot",
   "version": "1.0.3",
   "description": "Remove :root rules",
   "license": "Apache-2.0",
-  "author": "Adobe",
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "contributors": [
+    "Cassondra Roberts <castastrophe@users.noreply.github.com> (https://allons-y.llc)"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castastrophe/postcss-droproot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/castastrophe/postcss-droproot/issues"
+  },
   "main": "index.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
-    "test": "ava"
+    "prepare": "husky install",
+    "test": "ava",
+    "coverage": "c8 yarn test",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
   },
   "devDependencies": {
-    "ava": "^5.3.0",
-    "postcss": "^8.4.24"
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/npm": "^10.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "ava": "^5.2.0",
+    "c8": "^7.13.0",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.21",
+    "semantic-release": "^21.0.1"
   }
 }
