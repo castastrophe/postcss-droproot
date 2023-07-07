@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.0 (2023-07-07)
+
+### Features
+
+* optimize plugin structure; incorporate test suite ([32a8cb3](https://github.com/castastrophe/postcss-droproot/commit/32a8cb32185ed994d44db620e6516448316551e5))
+
 ## 1.0.2 (2021-03-10)
 
 ### 🐛 Bug fixes
