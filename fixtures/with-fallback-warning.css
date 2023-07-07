@@ -1,0 +1,18 @@
+:root {
+    --prefix-component-background-color: green;
+    --prefix-component-background-color: blue;
+    --prefix-component-text-color: black;
+    --prefix-component-variant-background-color: red;
+    background-color: hotpink;
+}
+
+.my-class {
+    background-color: var(--prefix-component-background-color);
+    color: var(--prefix-component-text-color, white);
+}
+
+.my-variant {
+    --prefix-component-background-color: var(--prefix-component-variant-background-color);
+    color: var(--prefix-component-text-color);
+    border: 1px solid var(--prefix-component-background-color);
+}

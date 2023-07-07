@@ -42,6 +42,7 @@
     "c8": "^7.13.0",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
+    "postcss-values-parser": "^6.0.2",
     "semantic-release": "^21.0.1"
   }
 }
