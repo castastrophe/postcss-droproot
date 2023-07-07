@@ -1,0 +1,10 @@
+.my-class {
+    background-color: var(--prefix-component-background-color, blue);
+    color: var(--prefix-component-text-color, white);
+}
+
+.my-variant {
+    --prefix-component-background-color: var(--prefix-component-variant-background-color, red);
+    color: var(--prefix-component-text-color, black);
+    border: 1px solid var(--prefix-component-background-color, blue);
+}
