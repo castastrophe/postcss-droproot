@@ -1,0 +1,7 @@
+:root {
+    --prefix-component-background-color: blue;
+}
+
+.my-class {
+    background-color: var(--prefix-component-background-color);
+}
