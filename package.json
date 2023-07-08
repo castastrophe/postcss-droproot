@@ -1,6 +1,6 @@
 {
   "name": "postcss-droproot",
-  "version": "2.0.0",
+  "version": "1.2.0",
   "description": "Remove :root rules",
   "license": "Apache-2.0",
   "author": "Larry Davis <lazdnet@gmail.com>",
@@ -43,6 +43,7 @@
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "postcss-values-parser": "^6.0.2",
+    "postcss-selector-parser": "^6.0.13",
     "semantic-release": "^21.0.1"
   }
 }

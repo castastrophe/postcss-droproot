@@ -13,6 +13,9 @@ governing permissions and limitations under the License.
 /** @type import('postcss-values-parser') */
 const { parse, nodeToString } = require('postcss-values-parser');
 
+/** @type import('postcss-selector-parser') */
+const selectorParser = require('postcss-selector-parser');
+
 /** @type import('postcss').PluginCreator */
 module.exports = ({
   withFallbacks = false,
@@ -23,8 +26,20 @@ module.exports = ({
       const rootDefinitions = new Map();
       return {
         Declaration(decl, { result }) {
-          const selector = decl.parent.selector;
-          if (!withFallbacks || selector !== ':root') return;
+          if (!withFallbacks) return;
+
+          let hasRoot = false;
+          selectorParser((selectors) => {
+            selectors.walk((selector) => {
+              if (selector.type !== 'selector') return;
+              console.log({selector, value: selector.value, nodes: selector.nodes});
+              // if (selector.value !== ':root') return;
+              // hasRoot = true;
+            });
+          }).processSync(decl.parent.selector);
+
+          if (!hasRoot) return;
+
           // If this is a :root selector, capture fallback values
           if (decl.prop.startsWith('--')) {
             // Add the fallback value to the map, we always want to keep the last value

@@ -34,13 +34,17 @@ test('drop :root selector', t => {
   return compare(t, 'basic.css', 'basic.css', {});
 });
 
+test('drop :root selector with complex selectors', t => {
+  return compare(t, 'complex-selector.css', 'complex-selector.css', {});
+});
+
 test('capture fallback definitions from :root', t => {
   return compare(t, 'with-fallback.css', 'with-fallback.css', {
     withFallbacks: true,
   });
 });
 
-  test('warn if withFallback is true and a non-variable property is found in :root', t => {
+test('warn if withFallback is true and a non-variable property is found in :root', t => {
     return compare(t, 'with-fallback-warning.css', 'with-fallback-warning.css', {
       withFallbacks: true,
     }, { warningCount: 1, warningContent: ['Only custom properties can be preserved from :root'] });

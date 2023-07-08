@@ -1,0 +1,11 @@
+:host {
+    --prefix-component-background-color: blue;
+}
+
+.my-container {
+    color: white;
+}
+
+.my-class {
+    background-color: var(--prefix-component-background-color);
+}
