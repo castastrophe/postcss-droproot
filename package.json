@@ -39,7 +39,7 @@
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "ava": "^6.1.2",
-    "c8": "^8.0.1",
+    "c8": "^9.1.0",
     "husky": "^9.0.11",
     "postcss": "^8.4.21",
     "postcss-values-parser": "^6.0.2",
